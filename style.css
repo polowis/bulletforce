@@ -3,6 +3,47 @@ body {
     padding: 0;
 }
 
+a.links{
+    display: inline-block;
+    position: relative;
+    color: #fff;
+    text-decoration: none;
+    font-size: 32px;
+    padding: 15px;
+    margin: 0 10px;
+    font-weight: bold;
+    z-index: 10;
+}
+
+a.link:hover{
+    color: #42d153;
+}
+
+a.links::before, a.links::after{
+    position: absolute;
+    content: '';
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    transition: all 0.4s ease 0s;
+    z-index: -1;
+}
+
+a.links::before{
+    top: 0;
+}
+
+a.links::after{
+    top: 100%
+}
+
+a.links:hover::before{
+    transform: rotate(-45deg);
+    top: 50%
+}
+
+
 .glitch {
     position: relative;
     width: 100%;
