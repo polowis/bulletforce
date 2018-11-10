@@ -63,7 +63,7 @@ section#entertainment {
   overflow-y: hidden;
 }
 
-#showcase .containernvm {
+#showcase .pol {
   margin-top: 25vh;
 }
 
@@ -103,7 +103,7 @@ footer .footer-bottom {
 }
 
 /* Utility Classes */
-.containernvm {
+.pol {
   max-width: 1180px;
   text-align: center;
   margin: 0 auto;
@@ -208,7 +208,7 @@ nav a#openup {
     height: 50vh;
   }
 
-  #showcase .containernvm {
+  #showcase .pol {
     margin-top: 15vh;
   }
 
