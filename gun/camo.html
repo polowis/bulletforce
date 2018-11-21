@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+    crossorigin="anonymous">
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="stylesheet" href="custom.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+  <title>Bullet force</title>
+</head>
+
+<body>
+  <!-- Showcase & Nav -->
+  <div id="showcase">
+    <header>
+      <nav class='cf'>
+        <ul class='cf'>
+          <li class="hide-on-small">
+            <a href="https://polowis.github.io/bulletforce/">Bullet Force</a>
+          </li>
+          <li>
+            <a href='#'>Gun</a>
+          </li>
+          <li>
+            <a href='#music'>Camo</a>
+          </li>
+          <li>
+            <a href='#'>Perks</a>
+          </li>
+          <li>
+            <a href='#'>About</a>
+          </li>
+        </ul>
+        <a href='#' id='openup'>Bullet force</a>
+      </nav>
+    </header>
+    <div class="section-main container">
+      <h1></h1>
+      <h2></h2>
+      <p class="lead hide-on-small">
+        
+      </p>
+    </div>
+  </div>
+
+  <div class="container mt-3">
+      <h2>Gun list</h2>
+      <p>Nhấn vào tên súng để biết thêm chi tiết </p>  
+      <input class="form-control" id="myInput" type="text" placeholder="Tìm tên súng">
+      <br>          
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Name</th>
+              <th>Cost</th>
+            </tr>
+          </thead>
+          <tbody id="myTable">
+            <tr>
+              <td>001</td>
+              <td style="color:#cc0052">US Flag</td>
+              <td>Legendary</td>
+            </tr>
+          <!--  <tr>
+              <td>002</td>
+              <td><a href="l85.html">L85</a></td>
+              <td>375,000 credits</td>
+            </tr>
+            <tr>
+              <td>003</td>
+              <td><a href="barret.html">BRT HS1</a></td>
+              <td>1000 gold</td>
+            </tr> 
+            <tr>
+              <td>004</td>
+              <td><a href="acr.html">ACR</a></td>
+              <td>1000 gold</td>
+            </tr>
+            <tr>
+                <td>005</td>
+                <td><a href="m16.html">M16</a></td>
+                <td>1000 gold</td>
+            </tr>
+            <tr>
+                <td>006</td>
+                <td><a href="p90.html">P90</a></td>
+                <td>1000 gold</td>
+            </tr>
+            <tr>
+                <td>007</td>
+                <td><a href="tommy.html">Tommy gun</a></td>
+                <td>1000 gold</td>
+            </tr>
+            <tr>
+                <td>008</td>
+                <td><a href="cslr4.html">CS-LR4</a></td>
+                <td>1000 gold</td>
+                </tr>
+            <tr>
+                <td>009</td>
+                <td><a href="vector.html">Vector</a></td>
+                <td>1100 gold</td>
+            </tr>
+            <tr>
+                <td>010</td>
+                <td><a href="famas.html">Famas</a></td>
+                <td>15,000 credits</td>
+            </tr> 
+            <tr>
+                <td>011</td>
+                <td><a href="ak12.html">Ak 12</a></td>
+                <td>30,000 credits</td>
+            </tr>
+            <tr>
+                <td>012</td>
+                <td><a href="scarh.html">Scar-h</a></td>
+                <td>60,000 credits</td>
+            </tr>  
+            <tr>
+                <td>013</td>
+                <td><a href="mcs.html">870mcs</a></td>
+                <td>90,000 credits</td>
+            </tr>  
+            <tr>
+                <td>014</td>
+                <td><a href="m40a5.html">M40A5</a></td>
+                <td>105,000 credits</td>
+            </tr>
+            <tr>
+                <td>015</td>
+                <td><a href="mp40.html">MP40</a></td>
+                <td>110,000 credits</td>
+            </tr>
+            <tr>
+                <td>016</td>
+                <td><a href="mp5.html">mp5</a></td>
+                <td>115,000 credits</td>
+            </tr>                  
+            <tr>
+                <td>017</td>
+                <td><a href="mpx.html">MPX</a></td>
+                <td>120,000 credits</td>
+            </tr>  
+            <tr>
+                <td>018</td>
+                <td><a href="aug.html">AUG</a></td>
+                <td>120,000 credits</td>
+            </tr>
+            <tr>
+                <td>019</td>
+                <td><a href="cx.html">CX Scorpio</a></td>
+                <td>125,000 credits</td>
+            </tr>
+            <tr>
+                <td>020</td>
+                <td><a href="saiga.html">Saiga 12K</a></td>
+                <td>135,000 credits</td>
+            </tr>
+            <tr>
+                <td>021</td>
+                <td><a href="mk11.html">MK 11</a></td>
+                <td>145,000 credits</td>
+            </tr>  
+            <tr>
+                <td>022</td>
+                <td><a href="mg4.html">MG4</a></td>
+                <td>165,000 credits</td>
+            </tr>
+            <tr>
+                <td>023</td>
+                <td><a href="asval.html">As val</a></td>
+                <td>180,000 credits</td>
+            </tr>
+            <tr>
+                <td>024</td>
+                <td><a href="fad.html">FAD</a></td>
+                <td>180,000 credits</td>
+            </tr>
+            <tr>
+                <td>025</td>
+                <td><a href="ak5c.html">AK-5C</a></td>
+                <td>180,000 credits</td>
+            </tr>  
+            <tr>
+                <td>026</td>
+                <td><a href="ak47.html">AK47</a></td>
+                <td>185,000 credits</td>
+            </tr>
+            <tr>
+                <td>027</td>
+                <td><a href="rpg.html">RPG-7V2</a></td>
+                <td>195,000 credits</td>
+            </tr>
+            <tr>
+                <td>028</td>
+                <td><a href="ump.html">UMP</a></td>
+                <td>195,000 credits</td>
+            </tr>
+            <tr>
+                <td>029</td>
+                <td><a href="lewis.html">Lewis Gun</a></td>
+                <td>200,000 credits</td>
+            </tr>
+            <tr>
+                <td>030</td>
+                <td><a href="m200.html">M200</a></td>
+                <td>210,000 credits</td>
+            </tr>
+            <tr>
+                <td>031</td>
+                <td><a href="m60.html">M60</a></td>
+                <td>220,000 credits</td>
+            </tr>
+            <tr>
+                <td>032</td>
+                <td><a href="compact.html">compact 45</a></td>
+                <td>0 credit</td>
+            </tr>
+            <tr>
+                <td>033</td>
+                <td><a href="tec9.html">Tec-9</a></td>
+                <td>1,000 golds</td>
+            </tr>
+            <tr>
+                <td>034</td>
+                <td><a href="m1911.html">M1911</a></td>
+                <td>100,000 credits</td>
+            </tr>
+            <tr>
+                <td>035</td>
+                <td><a href="butterfly.html">Butterfly knife</a></td>
+                <td>1,000 golds</td>
+            </tr>
+            <tr>
+                <td>036</td>
+                <td><a href="hand.html">Hand</a></td>
+                <td>1,000 golds</td>
+            </tr>
+            <tr>
+                <td>037</td>
+                <td><a href="deagle.html">Desert Eagle</a></td>
+                <td>1,000 golds</td>
+            </tr>
+            <tr>
+                <td>038</td>
+                <td><a href="shorty.html">Shorty SG</a></td>
+                <td>1,000 golds</td>
+            </tr>
+            <tr>
+                <td>039</td>
+                <td><a href="rex.html">MP412 Rex</a></td>
+                <td>15,000 credits</td>
+            </tr>
+            <tr>
+                <td>040</td>
+                <td><a href="he.html">M320 HE</a></td>
+                <td>45,000 credits</td>
+                </tr> -->     
+          </tbody>
+        </table>
+      </div>
+
+      <script>
+          $(document).ready(function(){
+            $("#myInput").on("keyup", function() {
+              var value = $(this).val().toLowerCase();
+              $("#myTable tr").filter(function() {
+                $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+              });
+            });
+          });
+      </script>
+
+ <!-- <footer>
+        <div class="pol">
+          <div class="footer-cols">
+            <ul>
+              <li>Legacy</li>
+              <li>
+                <a href="#">Razey</a>
+              </li>
+              <li>
+                <a href="#">Daisuki0504</a>
+              </li>
+              <li>
+                <a href="#">FrostyMelon</a>
+              </li>
+              <li>
+                <a href="#">Pimass</a>
+              </li>
+              <li>
+                <a href="#">Polowis</a>
+              </li>
+            </ul>
+    
+            <ul>
+              <li>legacy</li>
+              <li>
+                <a href="#">Hargan</a>
+              </li>
+              <li>
+                <a href="#">Hiimnoob</a>
+              </li>
+              <li>
+                <a href="#">Zues01</a>
+              </li>
+              <li>
+                <a href="#">BossRudo</a>
+              </li>
+              <li>
+                <a href="#">Ouvel</a>
+              </li>
+            </ul>
+    
+            <ul>
+              <li>Game</li>
+              <li>
+                <a href="#">Gun</a>
+              </li>
+              <li>
+                <a href="#">Camo</a>
+              </li>
+              <li>
+                <a href="#">Killstreak</a>
+              </li>
+              <li>
+                <a href="#">Maps</a>
+              </li>
+              <li>
+                <a href="#">Perk</a>
+              </li>
+            </ul>
+    
+            <ul>
+              <li>About </li>
+              <li>
+                <a href="#">Work with us</a>
+              </li>
+              <li>
+                <a href="#">Contact</a>
+              </li>
+              <li>
+                <a href="#">unknwon</a>
+              </li>
+              <li>
+                <a href="#">unknown</a>
+              </li>
+              <li>
+                <a href="#">Unknown</a>
+              </li>
+            </ul>
+    
+          </div>
+        </div>-->
+        <div class="footer-bottom text-center">
+          Copyright &copy; 2018 Polowis
+        </div>
+      </footer> 
+    
+      <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+      <script src="gun.js"></script>
+    </body>
+    
+    </html>
