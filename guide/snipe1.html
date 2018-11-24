@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+    crossorigin="anonymous">
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="stylesheet" href="life.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <title>Bullet force</title>
+</head>
+<style>
+  @import url('https://fonts.googleapis.com/css?family=PT+Sans');
+
+/* CSS Variables */
+:root {
+  --primary-color: #b90415;
+  --primary-color-hover: #d3071b;
+  --secondary-color: #103063;
+  --secondary-color-hover: #143f85;
+  --light-color: #f4f4f4;
+}
+
+body {
+  font-family: 'PT Sans', sans-serif;
+  background-color: #252529;
+  margin: 0;
+  color: #fff;
+  line-height: 1.6;
+}
+
+img {
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: #ccc;
+}
+
+/* Section */
+.section {
+  padding: 2rem 0;
+}
+
+.section-head {
+  font-size: 2.5rem;
+  margin: 0;
+}
+
+.section h3 {
+  font-size: 2rem;
+}
+
+section#entertainment {
+  background: url(../img/section-bg.jpg) no-repeat bottom/cover;
+  padding: 10rem 0;
+}
+
+.gift-cards {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(2, 1fr);
+  text-align: left;
+}
+
+/* Showcase */
+#showcase {
+  margin: 0;
+  padding: 0;
+  background: url(../img/kaga2.JPG) no-repeat center/cover;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow-y: hidden;
+}
+
+#showcase .pol {
+  margin-top: 25vh;
+}
+
+#showcase h1 {
+  font-size: 4rem;
+  margin-bottom: 0;
+}
+
+#showcase h2 {
+  font-size: 2rem;
+}
+
+/* Footer */
+footer .footer-cols {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 2rem;
+  text-align: left;
+  font-size: 14px;
+}
+
+footer .footer-cols ul {
+  list-style: none;
+}
+
+footer .footer-cols ul li:first-child {
+  font-size: 1.2rem;
+  padding-bottom: 0.5rem;
+  border-bottom: #444 solid 1px;
+  margin-bottom: 1rem;
+}
+
+footer .footer-bottom {
+  background: #333;
+  padding: 1rem;
+  color: white;
+}
+
+/* Utility Classes */
+.pol {
+  max-width: 1180px;
+  text-align: center;
+  margin: 0 auto;
+  padding: 0 3rem;
+}
+
+.lead {
+  font-size: 1.3rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* Buttons */
+.btn {
+  padding: 1rem;
+  color: #fff;
+  display: inline-block;
+}
+
+.btn-primary {
+  background: var(--primary-color);
+}
+
+.btn-primary:hover {
+  background: var(--primary-color-hover);
+}
+
+.btn-secondary {
+  background: var(--secondary-color);
+}
+
+.btn-secondary:hover {
+  background: var(--secondary-color-hover);
+}
+
+/* Text colors */
+.text-primary {
+  color: var(--primary-color);
+}
+
+.text-secondary {
+  color: var(--secondary-color);
+}
+
+.text-light {
+  color: var(--light-color);
+}
+
+.bg-light {
+  background: var(--light-color);
+  color: #333;
+}
+
+.mb {
+  margin-bottom: 1rem;
+}
+
+.mt {
+  margin-top: 1rem;
+}
+
+/* Navigation */
+nav {
+  height: 40px;
+  width: 100%;
+  background-color: #333;
+  color: #eee;
+  position: fixed;
+}
+nav ul {
+  padding: 0;
+  margin: 0;
+}
+nav li {
+  display: inline;
+  float: left;
+}
+nav a {
+  display: inline-block;
+  width: 100px;
+  text-align: center;
+  text-decoration: none;
+  padding: 10px 0;
+  color: #eee;
+  text-decoration: none;
+}
+nav li:hover {
+  background-color: #444;
+}
+nav a#openup {
+  display: none;
+}
+
+@media screen and (max-width: 580px) {
+  .hide-on-small {
+    display: none;
+  }
+
+  #showcase {
+    height: 50vh;
+  }
+
+  #showcase .pol {
+    margin-top: 15vh;
+  }
+
+  #showcase h1 {
+    font-size: 3rem;
+  }
+
+  #showcase h2 {
+    font-size: 1.5rem;
+  }
+
+  nav {
+    height: auto;
+    border-bottom: 0;
+  }
+  nav ul {
+    display: none;
+    height: auto;
+  }
+  nav li {
+    width: 100%;
+    float: left;
+    position: relative;
+  }
+  nav a {
+    text-align: left;
+    width: 100%;
+    text-indent: 25px;
+    background: #333;
+    border-bottom: 1px solid #555;
+  }
+  nav a:hover {
+    background: #444;
+  }
+  nav a#openup:after {
+    content: '|||';
+    transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    /* IE 9 */
+    -webkit-transform: rotate(-90deg);
+    /* Safari and Chrome */
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    position: absolute;
+    right: 5px;
+    top: 20px;
+  }
+  nav a#openup {
+    display: block;
+    background-color: #333;
+    width: 100%;
+    position: relative;
+  }
+}
+.cf:before,
+.cf:after {
+  content: '';
+  display: table;
+}
+
+.cf:after {
+  clear: both;
+}
+
+.cf {
+  zoom: 1;
+}
+
+@media screen and (max-width: 780px) {
+  .gift-cards {
+    grid-template-columns: 1fr;
+  }
+
+  footer .footer-cols {
+    display: none;
+  }
+}
+
+@media screen and (max-height: 580px) {
+  #showcase p.lead {
+    display: none;
+  }
+}
+  </style>
+<body>
+  <!-- Showcase & Nav -->
+  <div id="showcase">
+    <header>
+      <nav class='cf'>
+        <ul class='cf'>
+          <li class="hide-on-small">
+            <a href="https://polowis.github.io/bulletforce/">Bullet Force</a>
+          </li>
+          <li>
+            <a href='https://polowis.github.io/bulletforce/gun/gun.html'>Gun</a>
+          </li>
+          <li>
+            <a href='https://polowis.github.io/bulletforce/gun/camo.html'>Camo</a>
+          </li>
+            <a href='#'>Perks</a>
+          </li>
+           <li>
+            <a href='https://goo.gl/forms/gFTtvR9or2QnxOId2'>Liên Hệ</a>
+          </li>
+          <li>
+            <a href='https://polowis.github.io/bulletforce/guide/guide.html'>Guide</a>
+          </li>
+        </ul>
+        <a href='#' id='openup'>Bullet force</a>
+      </nav>
+    </header>
+    <div class="section-main container">
+      <h1></h1>
+      <h2></h2>
+      <p class="lead hide-on-small">
+        
+      </p>
+    </div>
+  </div>
+
+  <section id="music" class="section">
+        <div class="container">
+                <div class="well"> 
+                        <div class="row">
+                             <div class="col-md-12">
+                                 <div class="row hidden-md hidden-lg"><h1 class="text-center" >Làm sao để bắn tỉa một cách chuyên nghiệp 1</h1></div>
+                                     
+                                 <div class="pull-left col-md-4 col-xs-12 thumb-contenido"><img class="center-block img-responsive" src='tem/snipe.png' /></div>
+                                 <div class="">
+                                     <h1  class="hidden-xs hidden-sm">Làm sao để bắn tỉa một cách chuyên nghiệp 1</h1>
+                                     <hr>
+                                     <small>24-11-2018</small><br>
+                                     <small><strong>Author: Unknown</strong></small>
+                                     <hr>
+                                     <p class="text-justify"> Chào mọi người, mình là một người chơi bullet force và thường xuyên tham gia các giải đấu 
+                                         giữa các clan khác nhau. Bản thân mình có khả năng sử dụng nhiều loại súng và sở hữu nhiều lối chơi khác nhau nên
+                                          ngày hôm nay, mình viết bài này và mình hi vọng có thể giúp các bạn cải thiện kĩ năng của mình trong bắn tỉa. 
+                                          Để trở thành một người bắn tỉa giỏi trong game, nó cần rất nhiều sự luyện tập và sự cố gắng. Mình tập bắn tỉa 
+                                          từ tháng 4 năm 2017 và mình có khá nhiều kinh nghiệm trong game FPS, đặc biệt là bullet force. 
+                                            .<br><br>
+                                 
+                                            Hiện tại có bốn khẩu sniper trong game Bullet force. Mình khuyến khích dùng m40a5 để luyện tập nhưng nếu bạn 
+                                            thích m200 thì cũng không sao. Lý do mình khuyến khích dùng hai khẩu này là vì lý do nó có thể mua được bằng 
+                                            credits và nó hoạt động gần như là giống nhau. M40a5 là khẩu súng đòi hỏi sự nhanh nhẹn ( Quickscope) trong 
+                                            khi M200 thì thường xuyên được xem là súng với cách bắn dragscope. Trong game có rất nhiều dạng bắn tỉa, bạn 
+                                            chỉ việc chọn xem cách nào là phù hợp với bạn nhất. Phổ biến nhất là : Sử dụng hai ngón ( hai ngón cái) để bắn.
+                                             Sử dụng ba ngón hoặc bốn ngón ( 4 ngón còn được gọi là claw). Chọn thứ mà bạn cảm thấy phù hợp nhất và luyện
+                                             tập cho đến khi thành thạo. Ngoài ra vẫn có một số người bắn 1 ngón hoặc 5 ngón nhưng mình không khuyến khích
+                                              cho đến khi bạn thật sự thành thạo với một trong ba cái trên. 
+                                            <br><br>
+                                 
+                                            Bước tiếp theo là độ nhạy trong game, hay con gọi là sensitivity. Độ nhạy giữ vai trò quan trọng trong việc bắn tỉa.
+                                             Nếu bạn copy độ nhạy từ người chơi khác, nó có thể sẽ không phù hợp với bạn và sẽ khiến việc bắn trở nên khó khăn hơn.
+                                              Độ nhạy sẽ giúp màn hình bạn quay nhanh hoặc chậm hơn. Cứ thử các con số cho đến khi bạn cảm thấy nó phù hợp với bạn
+                                               nhất. Bản thân mình dùng 115%; 110%. 
+                                            .<br><br>
+                                 
+                                            Một vài điều nữa là nếu bạn là người mới thì nên bắt đầu với độ nhạy thấp và dần dần đẩy nó lên cao. Chơi offline với máy
+                                             để luyện tập Quickscope, dragscope v...vv( mình sẽ đề cập đến mấy vấn đề này sau). Nếu như bạn thấy tâm bắn của mình chạy tùm 
+                                             lum thì bạn nên chỉnh độ nhạy nó xuống thấp.  <br>
+                                 
+                                             Tất cả mọi thứ đều mất thời gian để luyện tập. Trên đời này không ai tự nhiên giỏi cả, chỉ là họ dành nhiều thời gian cho vấn đề đó thôi. .</p></div>
+                             </div>
+                        </div>
+                    </div>
+                </div>
+        <!--  <h2 class="section-head">
+            <i class="fas fa-music"></i> Gun
+          </h2> -->
+         <!-- <h3>Ak12</h3>
+          <p class="lead"> Ak12 thường được xem là khẩu súng bị lãng quên. Rất ít ai sử dụng nó nhưng ak12 lại sở hữu sát thương không kém gì
+              scar-h
+          </p>-->
+          <!--<a href="gun/gun.html" class="btn btn-primary mb">Xem thêm thông tin súng tại đây</a>-->
+          <!--<p class="text-light">Bullet force có thể được tải về trên iOS và Android </p>-->
+         <!-- <img src="pic/ak12.PNG" alt="">
+        </div>-->
+      </section>
+
+    <!--  <table class="table table-hover">
+        <thead>
+          <tr>
+            <th></th>
+            <th></th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody id="myTable">
+          <tr>
+            <td>Damage</td>
+            <td>25-28?</td>
+           
+          </tr>
+          <tr>
+            <td>Accuracy</td>
+            <td>60?</td>
+        
+          </tr>
+          <tr>
+            <td>Hip fire</td>
+            <td>55??</td>
+          </tr> 
+          <tr>
+            <td>Stability</td>
+            <td>91</td>
+            </tr> 
+            <tr>
+              <td>Range </td>
+              <td>100</td>
+              </tr> 
+            <tr>
+                <td>Rate of fire </td>
+                <td>675 rpm</td>
+            </tr> 
+        </tbody>
+      </table>
+<div class="container-fluid bg-success"  style="padding-top: 70px; padding-bottom: 70px;">
+  <h1>Lợi ích </h1>
+  <p> Ak-12 có độ ỗn định khá cao nên không bị giật. Ngoài ra nó còn sỡ hữu sát thương khá to và tốc độ đạn xả nhanh hơn scar-h
+      đã đặt bản thân nó vào một trong những khẩu súng quan trọng đối với người mới chơi.
+       </p>
+</div>
+
+<div class="container-fluid bg-danger"  style="padding-top: 70px; padding-bottom: 70px;">
+    <h1>Khuyết điểm </h1>
+    <p> Tốc độ bắn và nạp đạn rất chậm. 
+         
+       </p>
+  </div>
+  <div class="container-fluid bg-info"  style="padding-top: 70px; padding-bottom: 70px;">
+      <h1>Phụ kiện </h1>
+      <p> Ak-12 có thể đi chung với những loại ống : RDS, Kobra, Coyote, Holo, Acog
+         </p>
+      <p>
+        Ngoài ra còn có thể đi kèm với muzzle brake và supressor. Lazer thì có đỏ và xanh
+      </p>
+    </div>-->
+  
+ 
+
+  <footer>
+       <!-- <div class="pol">
+          <div class="footer-cols">
+            <ul>
+              <li>Legacy</li>
+              <li>
+                <a href="#">Razey</a>
+              </li>
+              <li>
+                <a href="#">Daisuki0504</a>
+              </li>
+              <li>
+                <a href="#">FrostyMelon</a>
+              </li>
+              <li>
+                <a href="#">Pimass</a>
+              </li>
+              <li>
+                <a href="#">Polowis</a>
+              </li>
+            </ul>
+    
+            <ul>
+              <li>legacy</li>
+              <li>
+                <a href="#">Hargan</a>
+              </li>
+              <li>
+                <a href="#">Hiimnoob</a>
+              </li>
+              <li>
+                <a href="#">Zues01</a>
+              </li>
+              <li>
+                <a href="#">BossRudo</a>
+              </li>
+              <li>
+                <a href="#">Ouvel</a>
+              </li>
+            </ul>
+    
+            <ul>
+              <li>Game</li>
+              <li>
+                <a href="#">Gun</a>
+              </li>
+              <li>
+                <a href="#">Camo</a>
+              </li>
+              <li>
+                <a href="#">Killstreak</a>
+              </li>
+              <li>
+                <a href="#">Maps</a>
+              </li>
+              <li>
+                <a href="#">Perk</a>
+              </li>
+            </ul>
+    
+            <ul>
+              <li>About </li>
+              <li>
+                <a href="#">Work with us</a>
+              </li>
+              <li>
+                <a href="#">Contact</a>
+              </li>
+              <li>
+                <a href="#">unknwon</a>
+              </li>
+              <li>
+                <a href="#">unknown</a>
+              </li>
+              <li>
+                <a href="#">Unknown</a>
+              </li>
+            </ul>
+    
+          </div>
+        </div> -->
+        <div class="footer-bottom text-center" >
+          Copyright &copy; 2018 Polowis
+        </div>
+      </footer>
+    
+      <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+      <!--<script src="gun.js"></script>-->
+      <script>
+      $(function() {
+        menu = $('nav ul');
+      
+        $('#openup').on('click', function(e) {
+          e.preventDefault();
+          menu.slideToggle();
+        });
+      
+        $(window).resize(function() {
+          var w = $(this).width();
+          if (w > 480 && menu.is(':hidden')) {
+            menu.removeAttr('style');
+          }
+        });
+      
+        $('nav li').on('click', function(e) {
+          var w = $(window).width();
+          if (w < 480) {
+            menu.slideToggle();
+          }
+        });
+        $('.open-menu').height($(window).height());
+      });
+      
+      // Smooth Scrolling
+      $('.cf a').on('click', function(event) {
+        if (this.hash !== '') {
+          event.preventDefault();
+      
+          const hash = this.hash;
+      
+          $('html, body').animate(
+            {
+              scrollTop: $(hash).offset().top
+            },
+            800,
+            function() {
+              window.location.hash = hash;
+            }
+          );
+        }
+      });
+    </script>
+      
+    </body>
+    
+    </html>
